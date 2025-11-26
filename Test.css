@@ -1,0 +1,147 @@
+/* =============================
+   GLOBAL STYLING
+============================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #050a30, #0b1e51, #021526);
+    background-attachment: fixed;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* AI Grid Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/8fKQeQw.png');
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* =============================
+   NAVIGATION BAR
+============================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.06);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+nav a {
+    color: #6fd6ff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #9bf1ff;
+    text-shadow: 0 0 12px #6fd6ff;
+}
+
+/* =============================
+   PAGE SECTIONS
+============================= */
+.page {
+    min-height: 100vh;
+    padding: 140px 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 45px;
+    text-shadow: 0 0 25px rgba(0, 200, 255, 0.7);
+}
+
+p {
+    font-size: 22px;
+    max-width: 800px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* =============================
+   BUTTONS
+============================= */
+.info-btn {
+    margin-top: 25px;
+    padding: 16px 30px;
+    font-size: 20px;
+    background: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+    transition: 0.25s ease;
+}
+
+.info-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.8);
+}
+
+/* =============================
+   MODAL POPUP
+============================= */
+#infoModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#modalContent {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    width: 450px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,230,255,0.5);
+    box-shadow: 0 0 30px rgba(0, 225, 255, 0.6);
+    text-align: center;
+}
+
+#modalText {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#closeModal {
+    padding: 12px 25px;
+    background: #ff3b3b;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#closeModal:hover {
+    background: #ff1f1f;
+    transform: scale(1.1);
+}
